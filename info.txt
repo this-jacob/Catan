@@ -1,0 +1,7 @@
+53 intersections  --Recheck on the sheet
+72 lengths        --Recheck on the sheet
+19 hexes
+5 resources
+1 desert
+2 dice
+1 deck

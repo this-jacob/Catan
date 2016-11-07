@@ -1,0 +1,25 @@
+Input the board state
+  -Good way to write it
+  -brick, wool, stone, lumber, crops, desert
+  -Constant beginner board states?
+
+Place starting pieces
+  -Probably resource valuation
+  -Consider locations
+  -Distance between cities
+
+Roll dice
+  -Generate random numbers
+  -Physical roll followed by input?
+
+Generate resources
+  -Activate off roll (input value)
+  -Distribute resources in memory
+
+Make plays
+  -Input real players
+  -Make decisions
+
+Win always
+  -More a goal than a T0DO
+  -Might not be 100% because of randomness
