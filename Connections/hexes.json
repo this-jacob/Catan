@@ -1,0 +1,97 @@
+{
+  "1": {
+      "cities": [1, 2, 3, 4, 9, 10],
+      "produce": "desert",
+      "roll": 7
+  },
+  "2":{
+      "cities": [5, 3, 8, 9, 14, 15],
+      "produce": "brick",
+      "roll": 8
+  },
+  "3": {
+      "cities": [4, 6, 10, 11, 16, 17],
+      "produce": "brick",
+      "roll": 4
+  },
+  "4": {
+      "cities": [7, 8, 13, 14, 19, 20],
+      "produce": "stone",
+      "roll": 5
+  },
+  "5":{
+      "cities": [9, 10, 15, 16, 21, 22],
+      "produce": "wood",
+      "roll": 3
+  },
+  "6":{
+      "cities": [11, 12, 17, 18, 23, 24],
+      "produce": "wood",
+      "roll": 11
+  },
+  "7":{
+      "cities": [14, 15, 20, 21, 26, 27],
+      "produce": "wool",
+      "roll": 10
+  },
+  "8":{
+      "cities": [16, 17, 22, 23, 28, 29],
+      "produce": "stone",
+      "roll": 6
+  },
+  "9":{
+      "cities": [19, 20, 25, 26, 31, 32],
+      "produce": "wheat",
+      "roll": 2
+  },
+  "10":{
+      "cities": [21, 22, 27, 28, 33, 34],
+      "produce": "wheat",
+      "roll": 11
+  },
+  "11":{
+      "cities": [23, 24, 29, 30, 35, 36],
+      "produce": "wool",
+      "roll": 12
+  },
+  "12":{
+      "cities": [26, 27, 32, 33, 38, 39],
+      "produce": "wool",
+      "roll": 9
+  },
+  "13":{
+      "cities": [28, 29, 34, 35, 40, 41],
+      "produce": "brick",
+      "roll": 5
+  },
+  "14":{
+      "cities": [31, 32, 37, 38, 43, 44],
+      "produce": "wood",
+      "roll": 6
+  },
+  "15":{
+      "cities": [33, 34, 39, 40, 45, 46],
+      "produce": "wood",
+      "roll": 4
+  },
+  "16":{
+      "cities": [35, 36, 41, 42, 47, 48],
+      "produce": "wheat",
+      "roll": 9
+  },
+  "17":{
+      "cities": [38, 39, 44, 45, 49, 50],
+      "produce": "stone",
+      "roll": 3
+  },
+  "18":{
+      "cities": [40, 41, 46, 47, 51, 52],
+      "produce": "wool",
+      "roll": 10
+  },
+  "19":{
+      "cities": [45, 46, 50, 51, 53, 54],
+      "produce": "wheat",
+      "roll": 8
+  },
+}

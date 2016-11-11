@@ -2,6 +2,7 @@ Input the board state
   -Good way to write it
   -brick, wool, stone, lumber, crops, desert
   -Constant beginner board states?
+  -Input hexes values (Just hard code JSON?)
 
 Place starting pieces
   -Probably resource valuation
