@@ -12,11 +12,11 @@ Place starting pieces
 
 Roll dice
   -Generate random numbers
-  -Physical roll followed by input?
+  +Physical roll followed by input?
 
 Generate resources
-  -Activate off roll (input value)
-  -Distribute resources in memory
+  +Activate off roll (input value)
+  +Distribute resources in memory
 
 Make plays
   -Input real players
@@ -25,3 +25,15 @@ Make plays
 Win always
   -More a goal than a T0DO
   -Might not be 100% because of randomness
+
+Implement trade.py
+  File for facilitating trades
+  Includes Diana's trade logic
+
+Implement develop.py
+  File for development card effects
+
+Implement build.py
+  File for building things
+  Checks for pre-existing places
+  Replaces current code in the build phase of commands
