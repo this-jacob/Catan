@@ -52,10 +52,10 @@ def runPlayer(turn, order):
 
         #Code For Printing the Help Menus
         if command = 'help':
-            print 'b to build, p to play a development card, t to trade'
+            print 'b to build, p to play a development card, t to trade, o to end turn'
             print 'Building: s for settlement, c for city, r for road, d for development'
             print 'Playing Developments: k for knight, v for victory point, r for roadbuilding, m for monopoly, y for year of plenty'  #TODO Put in development cards
-            print 'Trading: enter t-help for a list of instructions.'
+            print 'Trading: enter t-help for a list of instructions.''
         elif command == 't-help':
             print 'Trading Help: First enter the desired player. If the player is Diana a prompt will appear.'
             print 'Enter in the resources to be sent from the active player.'
@@ -98,6 +98,10 @@ def runPlayer(turn, order):
                 trade.playerTrade(turn, order, target)
             else:
                 trade.dianaTrade()
+
+        #End turn code
+        elif command == 'o':
+            over = true
 
     return
 
