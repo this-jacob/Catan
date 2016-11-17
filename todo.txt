@@ -27,13 +27,14 @@ Win always
   -Might not be 100% because of randomness
 
 Implement trade.py
-  File for facilitating trades
-  Includes Diana's trade logic
+  +File for facilitating trades
+  -Includes Diana's trade logic
 
 Implement develop.py
-  File for development card effects
+  +File for development card effects
 
 Implement build.py
-  File for building things
-  Checks for pre-existing places
-  Replaces current code in the build phase of commands
+  -File for building things
+  +-Checks for pre-existing places
+  +Replaces current code in the build phase of commands
+  -Pay for builds
