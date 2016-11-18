@@ -1,4 +1,5 @@
-import player, actions
+#Atleast this isn't a financial app.
+import player, actions, gamestart
 
 def main():
 
@@ -11,6 +12,8 @@ def main():
     order = [player1, player2, player3, diana]
 
     roll = 0
+
+    gamestart.start(order)
 
     while True:
         for turn in order:
