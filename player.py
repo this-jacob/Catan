@@ -8,7 +8,7 @@ class Player:
         self.resources = {}
         self.developments = {}
 
-        self.setlements = []
+        self.settlements = []
         self.cities = []
         self.roads = []
 

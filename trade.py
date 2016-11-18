@@ -1,7 +1,7 @@
 def playerTrade(turn, order, target):
 
     #Determine which player is the object of the trade
-    for each in order
+    for each in order:
         if target == 1:
             trader = each
         elif target == 2:

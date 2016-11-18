@@ -8,17 +8,17 @@ def runDiana():
 #Specifically for inputing the player's turn
 def runPlayer(turn, order):
 
-    over = false
+    over = False
 
     while not over:
         command = raw_input('|:')
 
         #Code For Printing the Help Menus
-        if command = 'help':
+        if command == 'help':
             print 'b to build, p to play a development card, t to trade, o to end turn'
             print 'Building: s for settlement, c for city, r for road, d for development'
             print 'Playing Developments: k for knight, v for victory point, r for roadbuilding, m for monopoly, y for year of plenty'  #TODO Put in development cards
-            print 'Trading: enter t-help for a list of instructions.''
+            print 'Trading: enter t-help for a list of instructions.'
         elif command == 't-help':
             print 'Trading Help: First enter the desired player. If the player is Diana a prompt will appear.'
             print 'Enter in the resources to be sent from the active player.'
@@ -64,7 +64,7 @@ def runPlayer(turn, order):
 
         #End turn code
         elif command == 'o':
-            over = true
+            over = True
 
     return
 
@@ -82,7 +82,7 @@ def genResources(roll, order):
             #When a hex is found, check through the players to see if they have a building there
             for player in order:
                 #Give resources for each setlement
-                for town in player.setlements:
+                for town in player.settlements:
                     if town in hexes[each]['cities']:
                         player.resources[hexes[each]['produce']] += 1
                 #Give resources for each city

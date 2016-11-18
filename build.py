@@ -2,7 +2,7 @@ def road(turn, location, order):
 
     #Check through players and make sure that the location isn't in use
     for each in order:
-        if location in each.cities:
+        if location in each.roads:
             print 'Already Occupied.'
             return
 
@@ -66,9 +66,15 @@ def settlement(turn, location, order):
 
 def city(turn, location):
 
+    settlementTrue = False
+
     #Make sure that the player has a settlement to upgrade
-    if not location in turn.settlements:
-        print 'Invalid Location'
+    for each in turn.settlements:
+        if location == each:
+            settlementTrue = True
+
+    #Break if no settlement built
+    if not settlementTrue:
         return
 
     #Pay for the city
