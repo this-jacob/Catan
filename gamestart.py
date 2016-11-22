@@ -5,16 +5,20 @@ def start(order):
 
     #Run through place order in order
     for each in order:
-        if each.name == 'Diana'
+        if each.name == 'Diana':
+            print 'Diana\'s thinking.'
             dianaSettlements(each)
         else:
-            placeSettlements(each)
+            print each.name ,
+            placeSettlements(each, order)
 
     #Snake back through the order
     for each in reversed(order):
-        if each.name == 'Diana'
+        if each.name == 'Diana':
+            print 'Diana\'s thinking.'
             dianaSettlements(each)
         else:
+            print each.name ,
             placeSettlements(each)
 
     return
@@ -63,13 +67,13 @@ def placeRoads(turn, location):
     while not placed:
         #Print out the adjacent paths
         print 'Valid road placements: ' ,
-        for path in cities[location]['paths']
-            print path ,
-            openPaths.append(path)
+        for path in cities[location]['paths']:
+          print path ,
+          openPaths.append(path)
         print
 
         #Get the player road choice
-        pathLoc = raw_input('Path Location: ')
+        pathLoc = int(raw_input('Path Location: '))
 
         #Add the path
         if pathLoc in openPaths:
