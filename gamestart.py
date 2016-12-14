@@ -49,6 +49,7 @@ def placeSettlements(turn, order):
             placed = True
         else:
             print 'Invalid location'
+            flag = True
 
     getResources(turn, location)
 
