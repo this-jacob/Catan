@@ -28,7 +28,7 @@ Win always
 
 Implement trade.py
   +File for facilitating trades
-  -Includes Diana's trade logic
+  -Includes eko's trade logic
 
 Implement develop.py
   +File for development card effects

@@ -44,6 +44,6 @@ def playerTrade(turn, order, target):
 
     return
 
-def dianaTrade():
+def ekoTrade():
 
     return

@@ -5,21 +5,22 @@ def start(order):
 
     #Run through place order in order
     for each in order:
-        if each.name == 'Diana':
-            print 'Diana\'s thinking.'
-            dianaSettlements(each)
+        if each.name == 'eko':
+            print 'eko\'s thinking.'
+            ekoSettlements(each, order)
         else:
-            print each.name ,
+            print each.name
             placeSettlements(each, order)
+        print '\n\n\n'
 
     #Snake back through the order
     for each in reversed(order):
-        if each.name == 'Diana':
-            print 'Diana\'s thinking.'
-            dianaSettlements(each)
+        if each.name == 'eko':
+            print 'eko\'s thinking.'
+            ekoSettlements(each, order)
         else:
             print each.name ,
-            placeSettlements(each)
+            placeSettlements(each, order)
 
     return
 
@@ -82,10 +83,80 @@ def placeRoads(turn, location):
 
     return
 
-def dianaSettlements(diana):
+def ekoSettlements(eko, order):
 
+    resourceDict = {}
+    resourceDict['wool'] = 1
+    resourceDict['wheat'] = 2
+    resourceDict['wood'] = 5
+    resourceDict['stone'] = 3
+    resourceDict['brick'] = 4
+    resourceDict['dessert'] = 0
 
-    getResources(diana, location)
+    valueDict = {}
+    possibleLocations = []
+
+    location = 0
+    highestValue = -1
+    value = 0
+    flag = True
+
+    #Open up the hexes json file
+    with open("Connections\\hexes.json") as hexes_data:
+        hexes = json.load(hexes_data)
+    #Open up the cities json file
+    with open("Connections\\cities.json") as cities_data:
+        cities = json.load(cities_data)
+
+    #Check each city for the one with the greatest value
+    for each in cities:
+        for eachHex in cities[each]['hexes']:
+            value += resourceDict[hexes[str(eachHex)]['produce']]
+
+        #Save the values of all the cities
+        valueDict[each] = value
+        value = 0
+
+#Everything is proper
+
+    #Sort the possible locations into an ordered array
+    #Find the highest possible value
+    for each in valueDict:
+        if valueDict[each] > highestValue:
+            highestValue = valueDict[each]
+
+    #Add everything to the array witht the highest valued first to the lowest valued
+    while highestValue > 0:
+        for each in valueDict:
+            if valueDict[each] == highestValue:
+                possibleLocations.append(each)
+        highestValue -= 1
+
+    #check the valid locations
+    for poss in possibleLocations:
+        flag = False
+        #Check through all other peoples used settlements
+        for play in order:
+            for sett in play.settlements:
+                if sett == poss:
+                    flag = True
+
+        #Break if a correct location has been found
+        if not flag:
+            location = poss
+            break
+
+    #At this point the location has been chosen
+    print 'eko\'s location choice: ' ,
+    print location
+
+    #Build the settlement in the world
+    eko.settlements.append(location)
+
+    #Choose a road placement
+    #TODO: CHOOSE A ROAD
+
+    getResources(eko, location)
     return
 
 def getResources(turn, location):

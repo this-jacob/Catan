@@ -1,7 +1,7 @@
 import json, player, trade, develop, build
 
 #Main AI loop
-def runDiana():
+def runeko():
 
     return
 
@@ -20,7 +20,7 @@ def runPlayer(turn, order):
             print 'Playing Developments: k for knight, v for victory point, r for roadbuilding, m for monopoly, y for year of plenty'  #TODO Put in development cards
             print 'Trading: enter t-help for a list of instructions.'
         elif command == 't-help':
-            print 'Trading Help: First enter the desired player. If the player is Diana a prompt will appear.'
+            print 'Trading Help: First enter the desired player. If the player is eko a prompt will appear.'
             print 'Enter in the resources to be sent from the active player.'
             print 'Then enter the resources to be recieved from the object player.'
 
@@ -60,7 +60,7 @@ def runPlayer(turn, order):
             if not target == 'd':
                 trade.playerTrade(turn, order, target)
             else:
-                trade.dianaTrade()
+                trade.ekoTrade()
 
         #End turn code
         elif command == 'o':

@@ -7,9 +7,9 @@ def main():
     player1 = player.Player('Player One')
     player2 = player.Player('Player Two')
     player3 = player.Player('Player Three')
-    diana = player.Player('Diana')
+    eko = player.Player('eko')
 
-    order = [player1, player2, player3, diana]
+    order = [player1, player2, player3, eko]
 
     roll = 0
 
@@ -31,9 +31,9 @@ def main():
             actions.genResources(roll, order)
 
             #AI Split
-            if turn.name == 'Diana':
+            if turn.name == 'eko':
                 #Run AI Code
-                actions.runDiana()
+                actions.runeko()
             else:
                 #Run Human Code
                 actions.runPlayer(turn, order)
