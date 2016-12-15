@@ -118,8 +118,6 @@ def ekoSettlements(eko, order):
         valueDict[each] = value
         value = 0
 
-#Everything is proper
-
     #Sort the possible locations into an ordered array
     #Find the highest possible value
     for each in valueDict:
@@ -141,6 +139,13 @@ def ekoSettlements(eko, order):
             for sett in play.settlements:
                 if sett == poss:
                     flag = True
+
+        #Check for adjacency
+        for play in order:
+            for sett in play.settlements:
+                for each in cities[sett]['towns']:
+                    if int(each) == int(poss):
+                        flag = True
 
         #Break if a correct location has been found
         if not flag:
