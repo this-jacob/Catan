@@ -75,7 +75,7 @@ def placeRoads(turn, location):
         print
 
         #Get the player road choice
-        pathLoc = int(raw_input('Path Location: '))
+        pathLoc = int(raw_input('Road Location: '))
 
         #Add the path
         if pathLoc in openPaths:
@@ -98,6 +98,7 @@ def ekoSettlements(eko, order):
     possibleLocations = []
 
     location = 0
+    path = 0
     highestValue = -1
     value = 0
     flag = True
@@ -160,7 +161,19 @@ def ekoSettlements(eko, order):
     eko.settlements.append(location)
 
     #Choose a road placement
-    #TODO: CHOOSE A ROAD
+    for path in cities[location]['paths']:
+        flag = False
+        for play in order:
+            for roads in play.roads:
+                if int(roads) == int(path):
+                    flag = True
+
+        if not flag:
+            eko.roads.append(path)
+            print 'Road location: ' ,
+            print path
+            break
+
 
     getResources(eko, location)
     return

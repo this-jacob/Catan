@@ -6,8 +6,10 @@ Input the board state
   -Input hexes values (Just hard code JSON?)
 
 Place starting pieces
-  -Probably resource valuation
-  -Consider locations
+  +Probably resource valuation
+  +Consider locations
+  -Generate an independent resource value system
+  -Use a true road build system
   -Distance between cities
 
 Roll dice
