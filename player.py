@@ -2,7 +2,7 @@ class Player:
 
     def __init__(self, name):
         self.name = name
-        self.vps = 0
+        self.vps = 2
         self.knights = 0
 
         self.resources = {}

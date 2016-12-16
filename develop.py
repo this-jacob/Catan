@@ -1,5 +1,9 @@
 import build
 
+def eko():
+
+    return
+
 def roadBuilding(turn):
 
     #Build two roads

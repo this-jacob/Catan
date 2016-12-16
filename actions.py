@@ -1,7 +1,27 @@
 import json, player, trade, develop, build
 
 #Main AI loop
-def runeko():
+def runeko(eko):
+
+    decision = 'play'
+
+    while not decision == 'end':
+        #Provide a list of actions that the program can take
+        commands = ['buildsettlement', 'buildcity', 'builddevelopment', 'playdevelopment', 'trade', 'end']
+
+        #Use the resources as a benchmark to determine actions to take
+
+        #Do the decision
+        if decision == 'buildsettlement':
+            ekobuild.settlement(eko)
+        elif decision == 'buildcity':
+            ekobuild.city(eko)
+        elif decision == 'builddevelopment':
+            ekobuild.development(eko)
+        elif decision == 'playdevelopment':
+            develop.eko()
+        elif decision == 'trade'
+            trade.ekoTrade()
 
     return
 

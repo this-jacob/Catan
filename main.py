@@ -33,10 +33,15 @@ def main():
             #AI Split
             if turn.name == 'eko':
                 #Run AI Code
-                actions.runeko()
+                actions.runeko(turn)
             else:
                 #Run Human Code
                 actions.runPlayer(turn, order)
+
+            if turn.vps >= 10:
+                print turn.name ,
+                print ' is the winner.'
+                return 0
 
     return 0
 
